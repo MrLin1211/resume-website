@@ -11,6 +11,7 @@
   --blue: #2f5f8f;
   --rust: #9c5138;
   --shadow: 0 22px 60px rgba(28, 41, 36, 0.13);
+  --anchor-offset: 94px;
 }
 
 * {
@@ -255,6 +256,7 @@ h3 {
 }
 
 .section {
+  scroll-margin-top: var(--anchor-offset);
   padding: clamp(58px, 9vw, 112px) clamp(20px, 5vw, 72px);
 }
 
@@ -470,6 +472,7 @@ h3 {
 }
 
 .contact-section {
+  scroll-margin-top: var(--anchor-offset);
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
   gap: 28px;
@@ -523,6 +526,10 @@ h3 {
 }
 
 @media (max-width: 920px) {
+  :root {
+    --anchor-offset: 146px;
+  }
+
   .site-header {
     align-items: flex-start;
     flex-direction: column;
@@ -544,6 +551,27 @@ h3 {
 
   .hero {
     min-height: auto;
+  }
+
+  .resume-panel {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 22px;
+    align-items: center;
+  }
+
+  .resume-panel::before {
+    width: 48px;
+    height: 48px;
+  }
+
+  .portrait {
+    width: clamp(118px, 24vw, 168px);
+    margin: 0;
+  }
+
+  .portrait span {
+    font-size: clamp(36px, 8vw, 58px);
   }
 
   .project-grid {
@@ -581,15 +609,69 @@ h3 {
     min-height: auto;
   }
 
-  .quick-facts div {
-    grid-template-columns: 1fr;
-    gap: 4px;
+  .resume-panel {
+    gap: 16px;
+    padding: 18px;
   }
 
-  .resume-panel,
+  .resume-panel::before {
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-top-width: 2px;
+    border-right-width: 2px;
+  }
+
+  .portrait {
+    width: 96px;
+    box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.12);
+  }
+
+  .portrait span {
+    font-size: 34px;
+  }
+
+  .quick-facts {
+    gap: 10px;
+  }
+
+  .quick-facts div {
+    grid-template-columns: 74px minmax(0, 1fr);
+    gap: 8px;
+    padding-top: 10px;
+  }
+
+  .quick-facts dt {
+    font-size: 12px;
+  }
+
+  .quick-facts dd {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
   .project-card,
   .education-card,
   .contact-card {
     padding: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .resume-panel {
+    grid-template-columns: 86px minmax(0, 1fr);
+  }
+
+  .portrait {
+    width: 86px;
+  }
+
+  .portrait span {
+    font-size: 30px;
+  }
+
+  .quick-facts div {
+    grid-template-columns: 68px minmax(0, 1fr);
   }
 }
