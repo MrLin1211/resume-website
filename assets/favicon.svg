@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="林蔚个人简历图标">
+  <defs>
+    <linearGradient id="bg" x1="10" y1="8" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#175c4c"/>
+      <stop offset="1" stop-color="#10211c"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="12" y1="16" x2="54" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#d5a04c"/>
+      <stop offset="1" stop-color="#b9832f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <path d="M14 14h36v6H20v24h30v6H14V14z" fill="url(#accent)" opacity=".95"/>
+  <path d="M24 26h6v16h9.5c4.7 0 7.5-2.5 7.5-6.8 0-4.2-2.8-6.7-7.5-6.7H36v-5.5h4.1c8.1 0 13.1 4.7 13.1 12.2 0 7.6-5 12.3-13.1 12.3H24V26z" fill="#fffdf8"/>
+  <path d="M28.2 23h6l3.7 12.2L42.4 23h5.2l4.5 12.2L55.8 23H62l-7 20h-5.3L45 30.9 40.3 43H35l-6.8-20z" fill="#fffdf8" opacity=".92"/>
+</svg>

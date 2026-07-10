@@ -411,7 +411,7 @@ h3 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -427,6 +427,7 @@ h3 {
 }
 
 .project-card.featured {
+  grid-column: span 2;
   background:
     linear-gradient(135deg, rgba(23, 92, 76, 0.08), rgba(185, 131, 47, 0.08)),
     rgba(255, 253, 248, 0.92);
@@ -435,11 +436,6 @@ h3 {
 .project-card.featured:first-child {
   grid-column: 1 / -1;
   min-height: 360px;
-}
-
-.project-card:last-child {
-  grid-column: 1 / -1;
-  min-height: auto;
 }
 
 .project-card.placeholder {
