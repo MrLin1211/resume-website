@@ -1,0 +1,349 @@
+@page {
+  size: A4;
+  margin: 11mm 10mm;
+}
+
+* {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+body {
+  min-width: 0;
+  background: #fffdf8 !important;
+  color: #17201d;
+  font-size: 10.3pt;
+  line-height: 1.52;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header,
+.hero-actions,
+.back-to-top,
+.contact-section .section-kicker {
+  display: none !important;
+}
+
+main {
+  overflow: visible;
+}
+
+.hero {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.9fr);
+  gap: 9mm;
+  align-items: start;
+  padding: 0 0 7mm;
+  border-bottom: 1px solid #ded8ca;
+}
+
+.hero-copy {
+  max-width: none;
+}
+
+.eyebrow,
+.section-kicker {
+  margin: 0 0 2.5mm;
+  color: #b9832f;
+  font-size: 7.5pt;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0 0 3mm;
+  font-size: 30pt;
+  line-height: 1;
+}
+
+h2 {
+  margin: 0 0 3mm;
+  font-size: 17pt;
+  line-height: 1.18;
+}
+
+h3 {
+  margin: 0 0 1.8mm;
+  font-size: 12pt;
+  line-height: 1.25;
+}
+
+p {
+  margin-bottom: 3mm;
+}
+
+.hero-title {
+  max-width: none;
+  margin-bottom: 2.8mm;
+  color: #0e3e36;
+  font-size: 13pt;
+  line-height: 1.36;
+}
+
+.hero-summary,
+.section-copy,
+.timeline-content p,
+.project-card p,
+.project-card li,
+.education-card p,
+.contact-section p {
+  color: #3f4a46;
+}
+
+.hero-summary {
+  max-width: none;
+  font-size: 9.8pt;
+}
+
+.resume-panel {
+  width: 100%;
+  justify-self: stretch;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4mm;
+  padding: 5mm;
+  border: 1px solid #ded8ca;
+  border-radius: 4px;
+  background: #fffaf0 !important;
+  box-shadow: none;
+}
+
+.resume-panel::before {
+  width: 11mm;
+  height: 11mm;
+  top: 4mm;
+  right: 4mm;
+  border-top-width: 1.5px;
+  border-right-width: 1.5px;
+}
+
+.portrait {
+  width: 22mm;
+  justify-self: center;
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.quick-facts {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5mm 4mm;
+}
+
+.quick-facts div {
+  grid-template-columns: 1fr;
+  gap: 1mm;
+  padding-top: 2.5mm;
+}
+
+.quick-fact-keywords {
+  grid-column: 1 / -1;
+}
+
+.quick-facts dt {
+  font-size: 8pt;
+}
+
+.quick-facts dd {
+  font-size: 9pt;
+  line-height: 1.42;
+}
+
+.section {
+  padding: 7mm 0 0;
+}
+
+.intro-grid,
+.skill-layout,
+.education-card,
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+  gap: 7mm;
+}
+
+.intro-grid {
+  border-top: 0;
+}
+
+.section-copy {
+  font-size: 10pt;
+}
+
+.section-heading {
+  max-width: none;
+  margin-bottom: 3.5mm;
+}
+
+.timeline {
+  gap: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 35mm minmax(0, 1fr);
+  gap: 5mm;
+  padding: 4mm 0;
+  border-top: 1px solid #ded8ca;
+  break-inside: avoid;
+}
+
+.timeline-date {
+  color: #2f5f8f;
+  font-size: 9pt;
+}
+
+.timeline-content {
+  max-width: none;
+}
+
+.company-heading {
+  gap: 2mm 3mm;
+  margin-bottom: 1.5mm;
+}
+
+.role {
+  margin-bottom: 1.8mm;
+  color: #175c4c;
+}
+
+.company-link,
+.project-card .text-link {
+  padding: 0;
+  border: 0;
+  background: none !important;
+  color: #175c4c;
+  font-size: 8.5pt;
+  text-decoration: underline;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4mm;
+}
+
+.project-card,
+.project-card.featured {
+  min-height: 0;
+  padding: 4.5mm 5mm;
+  border: 1px solid #ded8ca;
+  border-left: 3px solid #175c4c;
+  border-radius: 4px;
+  background: #fffdf8 !important;
+  box-shadow: none;
+  break-inside: avoid;
+}
+
+.project-card.featured:first-child,
+.project-card:last-child {
+  grid-column: auto;
+  min-height: 0;
+}
+
+.project-meta {
+  gap: 2mm;
+  margin-bottom: 2.2mm;
+}
+
+.project-meta span {
+  padding: 1mm 2mm;
+  border-radius: 999px;
+  font-size: 8pt;
+}
+
+.project-card .text-link {
+  margin: 0 0 2.5mm;
+}
+
+.project-card ul {
+  gap: 1.5mm;
+  margin: 0;
+  padding-left: 4.5mm;
+}
+
+.skill-section {
+  background: #17201d !important;
+  color: white;
+  margin-top: 7mm;
+  padding: 7mm 6mm;
+  border-radius: 4px;
+}
+
+.skill-section .section-heading {
+  margin-bottom: 4mm;
+}
+
+.skill-cloud {
+  gap: 2mm;
+  padding: 0;
+  border: 0;
+  background: transparent !important;
+}
+
+.skill-cloud span {
+  padding: 1.5mm 2.2mm;
+  border-color: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08) !important;
+  font-size: 8.5pt;
+}
+
+.skill-groups {
+  gap: 3mm;
+}
+
+.skill-groups article {
+  padding-bottom: 3mm;
+  break-inside: avoid;
+}
+
+.skill-groups p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.education-section {
+  background: transparent !important;
+}
+
+.education-card {
+  padding: 5mm;
+  border-radius: 4px;
+  background: #fffaf0 !important;
+  break-inside: avoid;
+}
+
+.education-extra {
+  margin-bottom: 1.5mm;
+  font-size: 9pt;
+}
+
+.contact-section {
+  margin-top: 7mm;
+  padding: 6mm;
+  border-radius: 4px;
+  background: #175c4c !important;
+  color: white;
+  break-inside: avoid;
+}
+
+.contact-section h2 {
+  margin-bottom: 2mm;
+}
+
+.contact-section p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.contact-card {
+  gap: 2mm;
+  padding: 4mm;
+  border-radius: 4px;
+}

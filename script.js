@@ -1,5 +1,6 @@
 const backToTop = document.querySelector(".back-to-top");
 const navLinks = Array.from(document.querySelectorAll(".site-nav a"));
+const resumePdfAction = document.querySelector("#resume-pdf-action");
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
@@ -49,6 +50,25 @@ const updateActiveNav = () => {
 
 window.addEventListener("scroll", updateActiveNav, { passive: true });
 window.addEventListener("resize", updateActiveNav);
+
+if (resumePdfAction) {
+  resumePdfAction.addEventListener("click", (event) => {
+    const isWeChat = /MicroMessenger/i.test(window.navigator.userAgent);
+
+    if (isWeChat) {
+      return;
+    }
+
+    event.preventDefault();
+
+    const link = document.createElement("a");
+    link.href = resumePdfAction.href;
+    link.download = "林蔚-个人简历.pdf";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  });
+}
 
 if (window.location.hash) {
   setActiveNav(window.location.hash.slice(1));
