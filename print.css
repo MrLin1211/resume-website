@@ -1,6 +1,10 @@
 @page {
   size: A4;
-  margin: 11mm 10mm;
+  margin: 0;
+}
+
+:root {
+  --pdf-page-safe-top: 11mm;
 }
 
 * {
@@ -9,10 +13,19 @@
 }
 
 html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fffdf8 !important;
   scroll-behavior: auto;
 }
 
 body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
   min-width: 0;
   background: #fffdf8 !important;
   color: #17201d;
@@ -34,6 +47,15 @@ a {
 
 main {
   overflow: visible;
+  min-height: 100vh;
+  padding: var(--pdf-page-safe-top) 10mm;
+  background: #fffdf8 !important;
+}
+
+.timeline-item:nth-child(3),
+.project-card:nth-child(2),
+.skill-section {
+  break-before: page;
 }
 
 .hero {
@@ -195,6 +217,11 @@ p {
   break-inside: avoid;
 }
 
+.timeline-item:nth-child(3) {
+  padding-top: var(--pdf-page-safe-top);
+  border-top: 0;
+}
+
 .timeline-date {
   color: #2f5f8f;
   font-size: 9pt;
@@ -248,6 +275,10 @@ p {
   min-height: 0;
 }
 
+.project-card:nth-child(2) {
+  margin-top: var(--pdf-page-safe-top);
+}
+
 .project-meta {
   gap: 2mm;
   margin-bottom: 2.2mm;
@@ -272,7 +303,7 @@ p {
 .skill-section {
   background: #17201d !important;
   color: white;
-  margin-top: 7mm;
+  margin-top: var(--pdf-page-safe-top);
   padding: 7mm 6mm;
   border-radius: 4px;
 }
